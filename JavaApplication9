@@ -1,0 +1,53 @@
+import java.util.Random;
+
+/**
+ *
+ * @author user
+ */
+public class JavaApplication9 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int []birthdays=new int[366];
+        int []dizi=new int[100];
+        int []result=new int[21];
+        Random r=new Random();
+        for(int x=0;x<=365;x++){
+           birthdays[x]=0;
+        }
+        for(int n=5;n<=100;n+=5){
+           for(int i=0;i<1000;i++){
+             for(int k=0;k<n;k++){
+               dizi[k]=r.nextInt(366);
+               birthdays[dizi[k]]+=1;
+        
+              }
+        
+              for(int m=0;m<=365;m++){
+               if(birthdays[m]>=2){
+                   result[n/5]+=1;
+                   for(int c=0;c<=365;c++){
+                       birthdays[c]=0;
+                   }
+                   break; 
+                }
+        
+            }
+      
+    
+             }
+            }
+        for(int i=1;i<=20;i++){
+       
+            System.out.println(i*5+"\n");
+            System.out.println((double)result[i]/1000+"\n");
+      
+      
+        }
+        
+        // TODO code application logic here
+    }
+    
+}
